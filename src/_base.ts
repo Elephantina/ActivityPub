@@ -1,5 +1,5 @@
 import { WithContext } from './Context.ts'
-import { DeepClone, HasKey } from './_util.ts'
+import { DeepClone } from './_util.ts'
 
 export class Base<T extends WithContext> {
 	public fields: T
@@ -12,7 +12,7 @@ export class Base<T extends WithContext> {
 		const data = new Base<T>(fields)
 		return new Proxy(data, {
 			get(target: Base<T>, p: keyof Base<T> & keyof T) {
-				return HasKey(target, p) ? target[p] : target.fields[p]
+				return p in target ? target[p] : target.fields[p]
 			},
 			set(target: Base<T>, p: keyof Base<T> & keyof T, newValue: any): boolean {
 				target.fields[p] = newValue
