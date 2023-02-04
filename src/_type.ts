@@ -1,19 +1,19 @@
-import {CollectionPage} from './CollectionPage.ts'
-import {Article} from './Article.ts'
-import {OrderedCollection} from './OrderedCollection.ts'
-import {Image} from './Image.ts'
-import {OrderedCollectionPage} from './OrderedCollectionPage.ts'
-import {Profile} from './Profile.ts'
-import {Tombstone} from './Tombstone.ts'
-import {Video} from './Video.ts'
-import {Relationship} from './Relationship.ts'
-import {Mention} from './Mention.ts'
-import {Audio} from './Audio.ts'
-import {Place} from './Place.ts'
-import {Link} from './Link.ts'
-import {Collection} from './Collection.ts'
-import {Note} from "./Note.ts";
-import {Page} from "./Page.ts";
+import { CollectionPage } from './CollectionPage.ts'
+import { Article } from './Article.ts'
+import { OrderedCollection } from './OrderedCollection.ts'
+import { Image } from './Image.ts'
+import { OrderedCollectionPage } from './OrderedCollectionPage.ts'
+import { Profile } from './Profile.ts'
+import { Tombstone } from './Tombstone.ts'
+import { Video } from './Video.ts'
+import { Relationship } from './Relationship.ts'
+import { Mention } from './Mention.ts'
+import { Audio } from './Audio.ts'
+import { Place } from './Place.ts'
+import { Link } from './Link.ts'
+import { Collection } from './Collection.ts'
+import { Note } from './Note.ts'
+import { Page } from './Page.ts'
 
 export enum ModelType {
 	// https://www.w3.org/TR/activitystreams-vocabulary/#types
@@ -25,12 +25,10 @@ export enum ModelType {
 	OrderedCollection = 'OrderedCollection',
 	CollectionPage = 'CollectionPage',
 	OrderedCollectionPage = 'OrderedCollectionPage',
-	
-	
-	Actor = 'Actor',// TODO this is not a type
 
+	Actor = 'Actor', // TODO this is not a type
 
-// https://www.w3.org/TR/activitystreams-vocabulary/#object-types
+	// https://www.w3.org/TR/activitystreams-vocabulary/#object-types
 	Article = 'Article',
 	Audio = 'Audio',
 	Document = 'Document',
@@ -44,7 +42,7 @@ export enum ModelType {
 	Tombstone = 'Tombstone',
 	Video = 'Video',
 	Mention = 'Mention',
-	
+
 	// https://www.w3.org/TR/activitystreams-vocabulary/#activity-types
 	Accept = 'Accept',
 	Add = 'Add',
@@ -74,8 +72,7 @@ export enum ModelType {
 	Undo = 'Undo',
 	Update = 'Update',
 	View = 'View',
-	
-	
+
 	// https://www.w3.org/TR/activitystreams-vocabulary/#actor-types
 	Application = 'Application',
 	Group = 'Group',

@@ -12,7 +12,7 @@ import { Base } from './_base.ts'
 export class IntransitiveActivity extends Base<IntransitiveActivityFields> {
 	static create(fields: IntransitiveActivityFields) {
 		return Base._create<IntransitiveActivityFields>({
-			type: ModelType.Activity,
+			type: ModelType.IntransitiveActivity,
 			...fields,
 		})
 	}
