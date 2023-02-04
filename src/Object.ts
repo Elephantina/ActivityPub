@@ -19,6 +19,7 @@ import {
 	LikesValue,
 	LocationValue,
 	MediaTypeValue,
+	ModelType,
 	NameMapValue,
 	NameValue,
 	PreviewValue,
@@ -52,7 +53,12 @@ export class Object extends Base<ObjectFields> {
 	}
 }
 
-export interface ObjectFields extends WithContext {
+// ObjectFields only [content, name, summary] or [contentMap, nameMap, summaryMap] at one time
+export type ObjectFields =
+	| Omit<_ObjectFields, 'name' | 'content' | 'summary'>
+	| Omit<_ObjectFields, 'nameMap' | 'contentMap' | 'summaryMap'>
+
+export interface _ObjectFields extends WithContext {
 	/**
 	 * Provides the globally unique identifier for
 	 * an {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object Object}
@@ -101,8 +107,6 @@ export interface ObjectFields extends WithContext {
 	 */
 	audience?: AudienceValue | AudienceValue[]
 
-	// TODO: only content or contentMap at one time
-
 	/**
 	 * The content or textual representation of the Object encoded as a JSON string.
 	 * By default, the value of content is HTML. The mediaType property can be
@@ -131,8 +135,6 @@ export interface ObjectFields extends WithContext {
 	 * {@link https://www.w3.org/ns/activitystreams#mediaType Docs}
 	 */
 	mediaType?: MediaTypeValue
-
-	// TODO: only name or nameMap at one time
 
 	/**
 	 * A simple, human-readable, plain-text name for the object.
@@ -255,8 +257,6 @@ export interface ObjectFields extends WithContext {
 	 * {@link https://www.w3.org/ns/activitystreams#replies Docs}
 	 */
 	replies?: RepliesValue
-
-	// TODO: only summary or summaryMap at one time
 
 	/**
 	 * A natural language summarization of the object encoded as HTML.

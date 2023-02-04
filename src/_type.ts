@@ -1,17 +1,19 @@
-import {CollectionPage} from "./CollectionPage.ts";
-import {Article} from "./Article.ts";
-import {OrderedCollection} from "./OrderedCollection.ts";
-import {Image} from "./Image.ts";
-import {OrderedCollectionPage} from "./OrderedCollectionPage.ts";
-import {Profile} from "./Profile.ts";
-import {Tombstone} from "./Tombstone.ts";
-import {Video} from "./Video.ts";
-import {Relationship} from "./Relationship.ts";
-import {Mention} from "./Mention.ts";
-import {Audio} from "./Audio.ts";
-import {Place} from "./Place.ts";
-import {Link} from "./Link.ts";
-import {Collection} from "./Collection.ts";
+import { CollectionPage } from './CollectionPage.ts'
+import { Article } from './Article.ts'
+import { OrderedCollection } from './OrderedCollection.ts'
+import { Image } from './Image.ts'
+import { OrderedCollectionPage } from './OrderedCollectionPage.ts'
+import { Profile } from './Profile.ts'
+import { Tombstone } from './Tombstone.ts'
+import { Video } from './Video.ts'
+import { Relationship } from './Relationship.ts'
+import { Mention } from './Mention.ts'
+import { Audio } from './Audio.ts'
+import { Place } from './Place.ts'
+import { Link } from './Link.ts'
+import { Collection } from './Collection.ts'
+import {Note} from "./Note.ts";
+import {Page} from "./Page.ts";
 
 export enum ModelType {
 	Object = 'Object',
@@ -43,8 +45,22 @@ export enum ModelType {
 	OrderedCollectionPage = 'OrderedCollectionPage',
 }
 
-export type AnyCollection = Collection | OrderedCollection;
-export type AnyObject = Object | Article | Audio | Document | APEvent | Image | Note | Page | Place | Profile | Relationship | Tombstone | Video | AnyCollection;
+export type AnyCollection = Collection | OrderedCollection
+export type AnyObject =
+	| Object
+	| Article
+	| Audio
+	| Document
+	| Event
+	| Image
+	| Note
+	| Page
+	| Place
+	| Profile
+	| Relationship
+	| Tombstone
+	| Video
+	| AnyCollection
 
 export type DateTime = string | Date
 export type LanguageTag = string
