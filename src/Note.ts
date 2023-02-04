@@ -1,3 +1,7 @@
+import {ObjectFields} from "./Object.ts";
+import {ModelType} from "./_type.ts";
+import {Base} from "./_base.ts";
+
 /**
  * Represents a short written work typically less than a single paragraph in length.
  *
@@ -12,4 +16,4 @@ export class Note extends Base<NoteFields> {
 	}
 }
 
-export interface NoteFields extends APObjectFields {}
+export interface NoteFields extends ObjectFields {}

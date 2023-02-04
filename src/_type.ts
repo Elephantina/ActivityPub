@@ -1,3 +1,18 @@
+import {CollectionPage} from "./CollectionPage.ts";
+import {Article} from "./Article.ts";
+import {OrderedCollection} from "./OrderedCollection.ts";
+import {Image} from "./Image.ts";
+import {OrderedCollectionPage} from "./OrderedCollectionPage.ts";
+import {Profile} from "./Profile.ts";
+import {Tombstone} from "./Tombstone.ts";
+import {Video} from "./Video.ts";
+import {Relationship} from "./Relationship.ts";
+import {Mention} from "./Mention.ts";
+import {Audio} from "./Audio.ts";
+import {Place} from "./Place.ts";
+import {Link} from "./Link.ts";
+import {Collection} from "./Collection.ts";
+
 export enum ModelType {
 	Object = 'Object',
 	Activity = 'Activity',
@@ -28,6 +43,9 @@ export enum ModelType {
 	OrderedCollectionPage = 'OrderedCollectionPage',
 }
 
+export type AnyCollection = Collection | OrderedCollection;
+export type AnyObject = Object | Article | Audio | Document | APEvent | Image | Note | Page | Place | Profile | Relationship | Tombstone | Video | AnyCollection;
+
 export type DateTime = string | Date
 export type LanguageTag = string
 export type MediaType = string
@@ -49,40 +67,40 @@ export type StartTimeValue = DateTime
 export type PublishedValue = DateTime
 export type UpdatedValue = DateTime
 export type RepliesValue = string | AnyCollection
-export type RelationshipValue = string | AnyASObject
+export type RelationshipValue = string | AnyObject
 export type IconValue = string | Image | Link
 export type ImageValue = string | Image | Link
-export type AttachmentValue = string | AnyASObject | Link
-export type AudienceValue = string | AnyASObject | Link
-export type InReplyToValue = string | AnyASObject | Link
+export type AttachmentValue = string | AnyObject | Link
+export type AudienceValue = string | AnyObject | Link
+export type InReplyToValue = string | AnyObject | Link
 export type LocationValue = string | Place | Link
-export type PreviewValue = string | AnyASObject | Link
-export type ToValue = string | AnyASObject | Link
-export type BtoValue = string | AnyASObject | Link
-export type CcValue = string | AnyASObject | Link
-export type BccValue = string | AnyASObject | Link
-export type GeneratorValue = string | AnyASObject | Link
-export type ObjectValue = string | AnyASObject | Link
-export type AttributedToValue = string | AnyASObject | Link | Mention
-export type TagValue = string | AnyASObject | Link | Mention
-export type ActorValue = string | AnyASObject | Link
-export type TargetValue = string | AnyASObject | Link
-export type ResultValue = string | AnyASObject | Link
-export type OriginValue = string | AnyASObject | Link
-export type InstrumentValue = string | AnyASObject | Link
-export type OneOfValue = string | AnyASObject | Link
-export type AnyOfValue = string | AnyASObject | Link
-export type SubjectValue = string | AnyASObject | Link
+export type PreviewValue = string | AnyObject | Link
+export type ToValue = string | AnyObject | Link
+export type BtoValue = string | AnyObject | Link
+export type CcValue = string | AnyObject | Link
+export type BccValue = string | AnyObject | Link
+export type GeneratorValue = string | AnyObject | Link
+export type ObjectValue = string | AnyObject | Link
+export type AttributedToValue = string | AnyObject | Link | Mention
+export type TagValue = string | AnyObject | Link | Mention
+export type ActorValue = string | AnyObject | Link
+export type TargetValue = string | AnyObject | Link
+export type ResultValue = string | AnyObject | Link
+export type OriginValue = string | AnyObject | Link
+export type InstrumentValue = string | AnyObject | Link
+export type OneOfValue = string | AnyObject | Link
+export type AnyOfValue = string | AnyObject | Link
+export type SubjectValue = string | AnyObject | Link
 export type AccuracyValue = number
 export type AltitudeValue = number
 export type LatitudeValue = number
 export type LongitudeValue = number
 export type RadiusValue = number
 export type UnitsValue = 'cm' | 'feet' | 'inches' | 'km' | 'm' | 'miles' | string
-export type ClosedValue = string | AnyASObject | Link | DateTime | boolean
+export type ClosedValue = string | AnyObject | Link | DateTime | boolean
 export type FormerTypeValue = string
 export type DeletedValue = DateTime
-export type DescribesValue = string | AnyASObject
+export type DescribesValue = string | AnyObject
 export type HrefValue = string
 export type HreflangValue = LanguageTag
 export type RelValue = string
