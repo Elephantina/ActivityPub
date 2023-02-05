@@ -4,4 +4,5 @@
 [![Deno](https://doc.deno.land/badge.svg)](https/deno.land/x/activitypub/mod.ts)
 
 ## Thanks
+
 - [SiranWeb/activitypub-models](https://github.com/SiranWeb/activitypub-models)
