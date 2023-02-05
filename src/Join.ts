@@ -11,4 +11,4 @@ export class Join extends Base<JoinFields> {
 	}
 }
 
-export interface JoinFields extends ActivityFields {}
+export type JoinFields = ActivityFields

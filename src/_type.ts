@@ -14,6 +14,8 @@ import { Link } from './Link.ts'
 import { Collection } from './Collection.ts'
 import { Note } from './Note.ts'
 import { Page } from './Page.ts'
+import { Document } from './Document.ts'
+import { Object } from './Object.ts'
 
 export enum ModelType {
 	// https://www.w3.org/TR/activitystreams-vocabulary/#types

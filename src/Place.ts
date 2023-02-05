@@ -26,7 +26,7 @@ export class Place extends Base<PlaceFields> {
 	}
 }
 
-export interface PlaceFields extends ObjectFields {
+export type PlaceFields = ObjectFields & {
 	/**
 	 * Indicates the accuracy of position coordinates on a Place objects.
 	 * Expressed in properties of percentage. e.g. "94.0" means "94.0% accurate".

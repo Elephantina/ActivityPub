@@ -11,4 +11,4 @@ export class Leave extends Base<LeaveFields> {
 	}
 }
 
-export interface LeaveFields extends ActivityFields {}
+export type LeaveFields = ActivityFields

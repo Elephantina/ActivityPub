@@ -11,4 +11,4 @@ export class Follow extends Base<FollowFields> {
 	}
 }
 
-export interface FollowFields extends ActivityFields {}
+export type FollowFields = ActivityFields

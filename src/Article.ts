@@ -15,4 +15,4 @@ export class Article extends Base<ArticleFields> {
 		})
 	}
 }
-export interface ArticleFields extends ObjectFields {}
+export type ArticleFields = ObjectFields

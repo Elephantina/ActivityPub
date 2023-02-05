@@ -1,4 +1,5 @@
 import {
+	ModelType,
 	OrderedCollectionPageNextValue,
 	OrderedCollectionPagePartOfValue,
 	OrderedCollectionPagePrevValue,
@@ -7,6 +8,7 @@ import {
 import { Modify } from './_util.ts'
 import { OrderedCollectionFields } from './OrderedCollection.ts'
 import { CollectionPageFields } from './CollectionPage.ts'
+import { Base } from './_base.ts'
 
 /**
  * Used to represent ordered subsets of items from an OrderedCollection.
@@ -22,11 +24,20 @@ export class OrderedCollectionPage extends Base<OrderedCollectionPageFields> {
 	}
 }
 
-interface OmittedCollectionPageFields extends Omit<CollectionPageFields, 'current' | 'first' | 'items' | 'last'> {}
+type OmittedCollectionPageFields = Omit<CollectionPageFields, 'current' | 'first' | 'items' | 'last'>
 
-export interface OrderedCollectionPageFields extends
-	OrderedCollectionFields,
-	Modify<OmittedCollectionPageFields, {
+export type OrderedCollectionPageFields =
+	& {
+		/**
+		 * A non-negative integer value identifying the relative position
+		 * within the logical view of a strictly ordered collection.
+		 *
+		 * {@link https://www.w3.org/ns/activitystreams#startIndex Docs}
+		 */
+		startIndex?: StartIndexValue
+	}
+	& OrderedCollectionFields
+	& Modify<OmittedCollectionPageFields, {
 		/**
 		 * Identifies the OrderedCollection to which a OrderedCollectionPage objects items belong.
 		 *
@@ -47,12 +58,4 @@ export interface OrderedCollectionPageFields extends
 		 * {@link https://www.w3.org/ns/activitystreams#prev Docs}
 		 */
 		prev?: OrderedCollectionPagePrevValue
-	}> {
-	/**
-	 * A non-negative integer value identifying the relative position
-	 * within the logical view of a strictly ordered collection.
-	 *
-	 * {@link https://www.w3.org/ns/activitystreams#startIndex Docs}
-	 */
-	startIndex?: StartIndexValue
-}
+	}>

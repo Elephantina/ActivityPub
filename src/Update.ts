@@ -11,4 +11,4 @@ export class Update extends Base<UpdateFields> {
 	}
 }
 
-export interface UpdateFields extends ActivityFields {}
+export type UpdateFields = ActivityFields

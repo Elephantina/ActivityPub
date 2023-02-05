@@ -15,4 +15,4 @@ export class Audio extends Base<AudioFields> {
 		})
 	}
 }
-export interface AudioFields extends DocumentFields {}
+export type AudioFields = DocumentFields

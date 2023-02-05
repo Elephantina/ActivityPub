@@ -11,4 +11,4 @@ export class View extends Base<ViewFields> {
 	}
 }
 
-export interface ViewFields extends ActivityFields {}
+export type ViewFields = ActivityFields

@@ -17,4 +17,4 @@ export class IntransitiveActivity extends Base<IntransitiveActivityFields> {
 		})
 	}
 }
-export interface IntransitiveActivityFields extends Omit<ActivityFields, 'object'> {}
+export type IntransitiveActivityFields = Omit<ActivityFields, 'object'>

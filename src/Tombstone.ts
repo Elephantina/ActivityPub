@@ -18,7 +18,7 @@ export class Tombstone extends Base<TombstoneFields> {
 	}
 }
 
-export interface TombstoneFields extends ObjectFields {
+export type TombstoneFields = ObjectFields & {
 	/**
 	 * On a Tombstone object, the formerType property identifies
 	 * the type of the object that was deleted.

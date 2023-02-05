@@ -16,4 +16,4 @@ export class Event extends Base<EventFields> {
 	}
 }
 
-export interface EventFields extends ObjectFields {}
+export type EventFields = ObjectFields

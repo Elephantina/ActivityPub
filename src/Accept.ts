@@ -18,4 +18,4 @@ export class Accept extends Base<AcceptFields> {
 	}
 }
 
-export interface AcceptFields extends ActivityFields {}
+export type AcceptFields = ActivityFields

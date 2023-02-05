@@ -16,4 +16,4 @@ export class Page extends Base<PageFields> {
 	}
 }
 
-export interface PageFields extends DocumentFields {}
+export type PageFields = DocumentFields

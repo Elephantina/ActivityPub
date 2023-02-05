@@ -19,4 +19,4 @@ export class Add extends Base<AddFields> {
 	}
 }
 
-export interface AddFields extends ActivityFields {}
+export type AddFields = ActivityFields

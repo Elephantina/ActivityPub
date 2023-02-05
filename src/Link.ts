@@ -32,7 +32,7 @@ export class Link extends Base<LinkFields> {
 	}
 }
 
-export interface LinkFields {
+export type LinkFields = {
 	'@context'?: never
 
 	/**

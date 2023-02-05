@@ -11,4 +11,4 @@ export class Undo extends Base<UndoFields> {
 	}
 }
 
-export interface UndoFields extends ActivityFields {}
+export type UndoFields = ActivityFields

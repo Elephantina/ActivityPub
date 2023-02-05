@@ -24,7 +24,7 @@ export class Collection extends Base<CollectionFields> {
 	}
 }
 
-export interface CollectionFields extends ObjectFields {
+export type CollectionFields = ObjectFields & {
 	/**
 	 * A non-negative integer specifying the total number of objects contained by
 	 * the logical view of the collection. This number might not reflect the actual

@@ -16,4 +16,4 @@ export class TentativeAccept extends Base<TentativeAcceptFields> {
 	}
 }
 
-export interface TentativeAcceptFields extends ActivityFields {}
+export type TentativeAcceptFields = ActivityFields

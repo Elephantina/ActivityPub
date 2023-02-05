@@ -11,4 +11,4 @@ export class Remove extends Base<RemoveFields> {
 	}
 }
 
-export interface RemoveFields extends ActivityFields {}
+export type RemoveFields = ActivityFields

@@ -11,4 +11,4 @@ export class Ignore extends Base<IgnoreFields> {
 	}
 }
 
-export interface IgnoreFields extends ActivityFields {}
+export type IgnoreFields = ActivityFields

@@ -15,4 +15,4 @@ export class Application extends Base<ApplicationFields> {
 		})
 	}
 }
-export interface ApplicationFields extends ActorFields {}
+export type ApplicationFields = ActorFields
