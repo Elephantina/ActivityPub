@@ -16,4 +16,4 @@ export class Service extends Base<ServiceFields> {
 	}
 }
 
-export interface ServiceFields extends ActorFields {}
+export type ServiceFields = ActorFields

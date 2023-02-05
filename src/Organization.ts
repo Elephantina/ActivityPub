@@ -16,4 +16,4 @@ export class Organization extends Base<OrganizationFields> {
 	}
 }
 
-export interface OrganizationFields extends ActorFields {}
+export type OrganizationFields = ActorFields

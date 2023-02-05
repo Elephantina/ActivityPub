@@ -11,4 +11,4 @@ export class Announce extends Base<AnnounceFields> {
 	}
 }
 
-export interface AnnounceFields extends ActivityFields {}
+export type AnnounceFields = ActivityFields

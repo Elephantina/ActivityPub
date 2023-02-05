@@ -19,7 +19,7 @@ export class Relationship extends Base<RelationshipFields> {
 	}
 }
 
-export interface RelationshipFields extends ObjectFields {
+export type RelationshipFields = ObjectFields & {
 	/**
 	 * On a Relationship object, the subject property identifies one of the connected individuals.
 	 * For instance, for a Relationship object describing "John is related to Sally",

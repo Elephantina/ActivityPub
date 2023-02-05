@@ -16,4 +16,4 @@ export class Video extends Base<VideoFields> {
 	}
 }
 
-export interface VideoFields extends DocumentFields {}
+export type VideoFields = DocumentFields

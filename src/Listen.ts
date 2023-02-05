@@ -11,4 +11,4 @@ export class Listen extends Base<ListenFields> {
 	}
 }
 
-export interface ListenFields extends ActivityFields {}
+export type ListenFields = ActivityFields

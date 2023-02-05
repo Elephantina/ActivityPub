@@ -16,4 +16,4 @@ export class Document extends Base<DocumentFields> {
 	}
 }
 
-export interface DocumentFields extends ObjectFields {}
+export type DocumentFields = ObjectFields

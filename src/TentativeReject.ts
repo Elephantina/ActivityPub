@@ -1,6 +1,6 @@
 import { Base } from './_base.ts'
 import { ModelType } from './_type.ts'
-import { RejectFields } from './TentativeAccept.ts'
+import { RejectFields } from './Reject.ts'
 
 export class TentativeReject extends Base<TentativeRejectFields> {
 	static create(fields: TentativeRejectFields) {
@@ -11,4 +11,4 @@ export class TentativeReject extends Base<TentativeRejectFields> {
 	}
 }
 
-export interface TentativeRejectFields extends RejectFields {}
+export type TentativeRejectFields = RejectFields

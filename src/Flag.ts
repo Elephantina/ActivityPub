@@ -11,4 +11,4 @@ export class Flag extends Base<FlagFields> {
 	}
 }
 
-export interface FlagFields extends ActivityFields {}
+export type FlagFields = ActivityFields

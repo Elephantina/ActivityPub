@@ -58,7 +58,7 @@ export type ObjectFields =
 	| Omit<_ObjectFields, 'name' | 'content' | 'summary'>
 	| Omit<_ObjectFields, 'nameMap' | 'contentMap' | 'summaryMap'>
 
-export interface _ObjectFields extends WithContext {
+export type _ObjectFields = WithContext & {
 	/**
 	 * Provides the globally unique identifier for
 	 * an {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object Object}

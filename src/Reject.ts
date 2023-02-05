@@ -11,4 +11,4 @@ export class Reject extends Base<RejectFields> {
 	}
 }
 
-export interface RejectFields extends ActivityFields {}
+export type RejectFields = ActivityFields

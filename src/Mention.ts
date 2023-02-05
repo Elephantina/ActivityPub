@@ -16,4 +16,4 @@ export class Mention extends Base<MentionFields> {
 	}
 }
 
-export interface MentionFields extends LinkFields {}
+export type MentionFields = LinkFields

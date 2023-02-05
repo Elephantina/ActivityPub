@@ -11,4 +11,4 @@ export class Read extends Base<ReadFields> {
 	}
 }
 
-export interface ReadFields extends ActivityFields {}
+export type ReadFields = ActivityFields

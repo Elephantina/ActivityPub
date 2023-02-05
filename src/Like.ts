@@ -11,4 +11,4 @@ export class Like extends Base<LikeFields> {
 	}
 }
 
-export interface LikeFields extends ActivityFields {}
+export type LikeFields = ActivityFields

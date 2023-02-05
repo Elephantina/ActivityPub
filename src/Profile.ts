@@ -18,7 +18,7 @@ export class Profile extends Base<ProfileFields> {
 	}
 }
 
-export interface ProfileFields extends ObjectFields {
+export type ProfileFields = ObjectFields & {
 	/**
 	 * On a Profile object, the describes property identifies
 	 * the object described by the Profile.

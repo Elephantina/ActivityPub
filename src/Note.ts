@@ -16,4 +16,4 @@ export class Note extends Base<NoteFields> {
 	}
 }
 
-export interface NoteFields extends ObjectFields {}
+export type NoteFields = ObjectFields

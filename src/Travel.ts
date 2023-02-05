@@ -11,4 +11,4 @@ export class Travel extends Base<TravelFields> {
 	}
 }
 
-export interface TravelFields extends ActivityFields {}
+export type TravelFields = ActivityFields

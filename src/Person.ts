@@ -16,4 +16,4 @@ export class Person extends Base<PersonFields> {
 	}
 }
 
-export interface PersonFields extends ActorFields {}
+export type PersonFields = ActorFields

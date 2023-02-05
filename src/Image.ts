@@ -16,4 +16,4 @@ export class Image extends Base<ImageFields> {
 	}
 }
 
-export interface ImageFields extends DocumentFields {}
+export type ImageFields = DocumentFields

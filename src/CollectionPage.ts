@@ -16,7 +16,7 @@ export class CollectionPage extends Base<CollectionPageFields> {
 	}
 }
 
-export interface CollectionPageFields extends CollectionFields {
+export type CollectionPageFields = CollectionFields & {
 	/**
 	 * Identifies the Collection to which a CollectionPage objects items belong.
 	 *

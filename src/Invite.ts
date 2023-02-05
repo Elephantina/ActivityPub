@@ -11,4 +11,4 @@ export class Invite extends Base<InviteFields> {
 	}
 }
 
-export interface InviteFields extends OfferFields {}
+export type InviteFields = OfferFields

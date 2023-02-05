@@ -19,7 +19,7 @@ export class Activity extends Base<ActivityFields> {
 	}
 }
 
-export interface ActivityFields extends ObjectFields {
+export type ActivityFields = ObjectFields & {
 	/**
 	 * Describes one or more entities that either performed or are expected to perform the activity.
 	 * Any single activity can have multiple actors. The actor MAY be specified using an indirect Link.

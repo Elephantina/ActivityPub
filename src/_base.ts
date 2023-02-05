@@ -14,6 +14,7 @@ export class Base<T extends WithContext> {
 			get(target: Base<T>, p: keyof Base<T> & keyof T) {
 				return p in target ? target[p] : target.fields[p]
 			},
+			// deno-lint-ignore no-explicit-any
 			set(target: Base<T>, p: keyof Base<T> & keyof T, newValue: any): boolean {
 				target.fields[p] = newValue
 				return true
@@ -21,7 +22,9 @@ export class Base<T extends WithContext> {
 		}) as Base<T> & T & WithContext
 	}
 
+	// deno-lint-ignore no-explicit-any
 	public toPlain(): Record<string, any> {
+		// deno-lint-ignore no-explicit-any
 		const result = {} as Record<string, any>
 		if ('@context' in this.fields) {
 			result['@context'] = this.fields['@context']
@@ -55,7 +58,7 @@ export class Base<T extends WithContext> {
 	public toJSON(): string {
 		return JSON.stringify(this.toPlain())
 	}
-
+	// deno-lint-ignore no-explicit-any
 	protected parseValue(value: any): any {
 		return value instanceof Base ? value.toPlain() : value.valueOf()
 	}

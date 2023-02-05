@@ -11,4 +11,4 @@ export class Offer extends Base<OfferFields> {
 	}
 }
 
-export interface OfferFields extends ActivityFields {}
+export type OfferFields = ActivityFields

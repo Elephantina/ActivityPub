@@ -9,7 +9,7 @@ import { IntransitiveActivityFields } from './IntransitiveActivity.ts'
  *
  * {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-arrive Docs}
  */
-export class Arrive extends Base<AddFArriveFieldsields> {
+export class Arrive extends Base<ArriveFields> {
 	static create(fields: ArriveFields) {
 		return Base._create<ArriveFields>({
 			type: ModelType.Arrive,
@@ -18,4 +18,4 @@ export class Arrive extends Base<AddFArriveFieldsields> {
 	}
 }
 
-export interface ArriveFields extends IntransitiveActivityFields {}
+export type ArriveFields = IntransitiveActivityFields

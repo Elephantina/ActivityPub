@@ -16,4 +16,4 @@ export class Group extends Base<GroupFields> {
 	}
 }
 
-export interface GroupFields extends ActorFields {}
+export type GroupFields = ActorFields

@@ -11,4 +11,4 @@ export class Create extends Base<CreateFields> {
 	}
 }
 
-export interface CreateFields extends ActivityFields {}
+export type CreateFields = ActivityFields

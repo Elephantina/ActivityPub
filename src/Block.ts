@@ -11,4 +11,4 @@ export class Block extends Base<BlockFields> {
 	}
 }
 
-export interface BlockFields extends IgnoreFields {}
+export type BlockFields = IgnoreFields

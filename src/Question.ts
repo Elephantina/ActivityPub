@@ -22,7 +22,7 @@ export class Question extends Base<QuestionFields> {
 	}
 }
 
-export interface QuestionFields extends IntransitiveActivityFields {
+export type QuestionFields = IntransitiveActivityFields & {
 	/**
 	 * Identifies an exclusive option for a Question.
 	 * Use of oneOf implies that the Question can have only a single answer.

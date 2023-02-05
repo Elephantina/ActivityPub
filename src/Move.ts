@@ -11,4 +11,4 @@ export class Move extends Base<MoveFields> {
 	}
 }
 
-export interface MoveFields extends ActivityFields {}
+export type MoveFields = ActivityFields

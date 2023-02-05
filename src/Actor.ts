@@ -36,7 +36,7 @@ export class Actor extends Base<ActorFields> {
 		})
 	}
 }
-export interface ActorFields extends ObjectFields {
+export type ActorFields = ObjectFields & {
 	/**
 	 *  The inbox is discovered through the inbox property of an actor's profile.
 	 *  The inbox MUST be an OrderedCollection. The inbox stream contains all activities

@@ -11,4 +11,4 @@ export class Dislike extends Base<DislikeFields> {
 	}
 }
 
-export interface DislikeFields extends ActivityFields {}
+export type DislikeFields = ActivityFields
