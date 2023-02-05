@@ -1,7 +1,7 @@
-name: Pull Request Check
+name: Test
 
 on:
-  pull_request:
+  push:
     branches: ["main"]
 
 jobs:
